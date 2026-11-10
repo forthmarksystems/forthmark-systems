@@ -1,0 +1,295 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Shot from "../../components/Shot.astro";
+import CtaBand from "../../components/CtaBand.astro";
+---
+
+<BaseLayout
+  title="Programme and Membership Platform Concept Demo"
+  description="A working concept demonstration of a programme and membership platform: applications, participants, cohorts, attendance, certificates and reporting. Built by Forthmark Systems with fictional data."
+  image="/images/work/programme-preview.png"
+>
+  <header class="page-head">
+    <div class="container">
+      <span class="chip chip--concept">Concept demonstration</span>
+      <div class="page-head__grid mt-2">
+        <div>
+          <p class="eyebrow">Concept demo / Training and membership</p>
+          <h1 class="h1">Programme and membership platform</h1>
+        </div>
+        <p class="lede">
+          A working demo for training providers and membership organisations:
+          applications, participants, cohorts, attendance, certificate eligibility
+          and reporting. Every record is fictional.
+        </p>
+      </div>
+
+      <div class="fact-row">
+        <div class="fact">
+          <div class="fact__label">Type</div>
+          <div class="fact__value">Concept demonstration</div>
+        </div>
+        <div class="fact">
+          <div class="fact__label">Data</div>
+          <div class="fact__value">Fictional, stored locally</div>
+        </div>
+        <div class="fact">
+          <div class="fact__label">Scope</div>
+          <div class="fact__value">Applications, cohorts, attendance, certificates</div>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/demos/programme/">
+          Open the working demo <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="btn btn--ghost" href="/contact">Discuss similar work</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="callout callout--concept">
+        <p>
+          <strong>This is not a client deployment.</strong> Aster Skills Academy is
+          an invented training provider. The applicants, participants, cohorts,
+          sessions and certificates are fictional and exist only to demonstrate how
+          the platform behaves. No real learner or client data is used.
+        </p>
+      </div>
+
+      <div class="mt-3">
+        <Shot
+          src="/images/work/programme-preview.png"
+          alt="Programme demo dashboard showing new applications, active participants, attendance, certificates ready, applications by track and upcoming sessions"
+          caption="Dashboard: applications, active participants, attendance and certificate readiness from the same fictional records."
+          tag="Concept demo"
+          wide
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container split">
+      <div class="sticky-head">
+        <p class="eyebrow">Overview</p>
+        <h2 class="h2">From application to certificate.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Training providers and membership organisations often run a complete
+          journey across disconnected tools. Applications arrive by form, email and
+          message. Enrolment lives in a spreadsheet. Attendance is a paper register.
+          Certificates depend on someone reconstructing the records at the end.
+        </p>
+        <p>
+          This demo connects the stages. An application is reviewed and accepted. An
+          accepted applicant becomes a participant and is placed in a cohort with
+          capacity. Sessions are scheduled. Attendance is marked against each
+          session. Eligibility is calculated from recorded attendance and a
+          configurable threshold. Certificates are issued and dated.
+        </p>
+        <p>
+          The point is not the specific visual design. It is that one record follows
+          the person through the programme, so each stage does not require a new
+          spreadsheet.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper2">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <p class="eyebrow">What it covers</p>
+          <h2 class="h2">The programme lifecycle.</h2>
+          <p class="lede">
+            Each view answers a question a programme manager actually asks during a
+            live intake or cohort.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card">
+          <h3>Applications</h3>
+          <p>
+            A review queue with source, track, date and status. Shortlist, accept or
+            decline, and see the applicant's note before deciding.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Participants</h3>
+          <p>
+            Records for everyone enrolled, with track, cohort, status and attendance
+            rate. Cohort and status can be changed from the record.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Cohorts</h3>
+          <p>
+            Capacity, dates and the full session schedule. Places left are visible,
+            and new sessions can be added without leaving the view.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Attendance</h3>
+          <p>
+            Choose a cohort and session, then mark each participant present, absent
+            or excused. Rates update immediately and the register exports as CSV.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Certificates</h3>
+          <p>
+            Eligibility is calculated from attendance and the configured threshold.
+            The screen separates eligible, issued and not yet eligible participants.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Reports</h3>
+          <p>
+            Applications, acceptance rate, active participants, attendance and
+            certificate counts, broken down by track and cohort.
+          </p>
+        </article>
+      </div>
+
+      <div class="gallery mt-3">
+        <Shot
+          src="/images/work/programme-applications.png"
+          alt="Applications view showing fictional applicants, tracks, source, received date, status selectors and view buttons"
+          caption="Applications: a review queue with status changes available in the list or in the applicant record."
+          tag="Concept demo"
+        />
+        <Shot
+          src="/images/work/programme-cohorts.png"
+          alt="Cohorts view showing capacity meters, dates, session schedules and controls to add sessions or open attendance"
+          caption="Cohorts: capacity, schedule and the controls that move work forward."
+          tag="Concept demo"
+        />
+        <Shot
+          src="/images/work/programme-attendance.png"
+          alt="Attendance register for a fictional cohort session with present, absent and excused options for each participant"
+          caption="Attendance: one register per session, with current rates shown beside each participant."
+          tag="Concept demo"
+        />
+        <Shot
+          src="/images/work/programme-certificates.png"
+          alt="Certificates view showing eligibility, attendance percentages, participant status and issue buttons"
+          caption="Certificates: eligibility and issue dates, with the threshold visible on the screen."
+          tag="Concept demo"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Interactions</p>
+        <h2 class="h2">What actually works.</h2>
+        <p class="lede mt-1">
+          The demo behaves like software, not a slideshow. Actions change the stored
+          records and the reports follow.
+        </p>
+      </div>
+      <div>
+        <ul class="check-list">
+          <li>Search and filter applications, participants and certificates.</li>
+          <li>Shortlist, accept or decline an application.</li>
+          <li>Accepting an applicant creates a participant record.</li>
+          <li>Assign a participant to a cohort or change their status.</li>
+          <li>Add a session to a cohort with a topic and date.</li>
+          <li>Mark attendance and watch the rate and eligibility recalculate.</li>
+          <li>Record a certificate issue date for an eligible participant.</li>
+          <li>Export applications, participants, registers, certificates or a track report.</li>
+          <li>Change the certificate threshold in settings and reset the demo.</li>
+        </ul>
+        <div class="callout mt-2">
+          <p>
+            <strong>Data handling:</strong> records are stored in this browser using
+            localStorage. Nothing is sent to a server, and clearing browser storage
+            or resetting the demo removes your changes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper2">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Boundaries</p>
+        <h2 class="h2">What this demo is not.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          The demo covers the operational core. It deliberately leaves out the parts
+          that require a real institution, real identity and real money.
+        </p>
+        <ul>
+          <li>No login, roles or permissions. Anyone with the page can change the demo data.</li>
+          <li>No shared database. Records do not sync between browsers or devices.</li>
+          <li>No application form for the public. Applications are added inside the demo.</li>
+          <li>No document upload, identity verification or assessment marking.</li>
+          <li>No payment, invoicing or refund handling.</li>
+          <li>No email or SMS notifications to applicants or participants.</li>
+          <li>No certificate file generation. The demo records eligibility and an issue date only.</li>
+        </ul>
+        <p class="small">
+          A real programme platform would need these features scoped against the
+          institution's rules, not assumed from a demo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">From demo to deployment</p>
+        <h2 class="h2">How this maps to real work.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          A production build starts with the programme rules: who can apply, how
+          cohorts are formed, what counts as attendance, what makes someone eligible,
+          who can issue a certificate, and what must be retained for audit.
+        </p>
+        <p>
+          From there, the system gains authentication, a shared database, role based
+          access, public application forms, notifications, document handling and
+          reporting exports. The lifecycle demonstrated here stays the same, but each
+          step is tested with the people who run the programme.
+        </p>
+        <div class="callout mt-2">
+          <p>
+            <strong>Technology note.</strong> The demo is built with Astro and
+            vanilla JavaScript, with no framework runtime. State is stored locally
+            and CSV exports are generated in the browser.
+          </p>
+        </div>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary" href="/demos/programme/">
+            Try the demo <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="btn btn--ghost" href="/work/operations-system">
+            See the operations demo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand
+    title="Running a programme on spreadsheets?"
+    text="Describe the journey from application to completion. We will help you decide which parts need a system and which parts can stay simple."
+    primaryLabel="Discuss a project"
+    secondaryLabel="All work"
+    secondaryHref="/work"
+  />
+</BaseLayout>

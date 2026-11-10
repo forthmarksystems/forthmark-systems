@@ -1,0 +1,47 @@
+---
+import DemoLayout from "../../layouts/DemoLayout.astro";
+---
+
+<DemoLayout
+  title="Programme and Membership Demo"
+  description="A working concept demonstration of a programme and membership platform: applications, participants, cohorts, attendance, certificates and reporting. Fictional data only."
+  demo="programme"
+  caseStudy="/work/programme-platform"
+>
+  <div class="demo-app">
+    <aside class="d-sidebar">
+      <div class="d-brand">
+        <span class="d-brand__mark" aria-hidden="true">A</span>
+        <span class="d-brand__text" id="brand-name">Aster Skills Academy<small>Demo workspace</small></span>
+      </div>
+      <nav class="d-nav" id="demo-nav" aria-label="Demo sections"></nav>
+      <div class="d-sidebar__foot">
+        <span class="d-avatar" aria-hidden="true">PM</span>
+        <span>Programme Manager<br />Concept workspace</span>
+      </div>
+    </aside>
+
+    <div class="d-main">
+      <header class="d-topbar">
+        <div>
+          <h1 id="view-title">Dashboard</h1>
+          <p id="view-subtitle">Applications, cohorts and progress at a glance.</p>
+        </div>
+        <div class="d-topbar__actions">
+          <button class="d-btn d-btn--ghost" type="button" data-action="reset">
+            Reset demo
+          </button>
+          <a class="d-btn d-btn--ghost" href="/work/programme-platform">Case study</a>
+        </div>
+      </header>
+      <div class="d-view" id="view"></div>
+    </div>
+  </div>
+
+  <dialog class="d-modal" id="modal" aria-labelledby="modal-title"></dialog>
+  <div class="d-toast" id="toast" role="status" aria-live="polite"></div>
+</DemoLayout>
+
+<script>
+  import "../../scripts/programme-demo.js";
+</script>

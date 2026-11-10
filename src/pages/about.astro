@@ -1,0 +1,197 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CtaBand from "../components/CtaBand.astro";
+
+const principles = [
+  {
+    title: "The problem before the product",
+    text: "A website, a dashboard or an app is only useful if it changes something real. We start by naming the problem in plain language, then decide what to build.",
+  },
+  {
+    title: "One record, one place",
+    text: "Duplicated data creates duplicated work. We design systems where a change is made once and the people who need it see the same version.",
+  },
+  {
+    title: "Built for daily use",
+    text: "Admin screens are part of the product. They are designed for the person doing the task repeatedly, not for a demo screenshot.",
+  },
+  {
+    title: "Handover is not an afterthought",
+    text: "A system the client cannot operate is an unfinished system. Documentation, permissions and training are planned from the start.",
+  },
+  {
+    title: "Say what is true",
+    text: "No invented metrics, no borrowed case studies, no hidden limits. If something is a demo, it is labelled. If something is out of scope, it is written down.",
+  },
+  {
+    title: "Keep it maintainable",
+    text: "We choose tools and structures that can be understood later. Cleverness that nobody can maintain is a cost, not a feature.",
+  },
+];
+
+const disciplines = [
+  {
+    label: "A / Digital presence",
+    title: "Websites that carry the brand and the enquiry",
+    text: "Structure, copy direction, responsive design and a clear next step. Built to load quickly and to be edited without breaking the layout.",
+  },
+  {
+    label: "B / Operations",
+    title: "Systems that hold the working truth",
+    text: "Customers, stock, orders, bookings, tasks and reporting. The unglamorous core that decides whether a growing business stays calm.",
+  },
+  {
+    label: "C / Custom",
+    title: "Applications shaped around a process",
+    text: "When the workflow is the advantage, a focused custom build beats forcing the business into someone else's template.",
+  },
+];
+---
+
+<BaseLayout
+  title="About"
+  description="Forthmark Systems is a digital solutions and business systems practice helping SMEs and growing organisations simplify operations, work more efficiently and grow."
+>
+  <header class="page-head">
+    <div class="container page-head__grid">
+      <div>
+        <p class="eyebrow">About</p>
+        <h1 class="h1">Practical systems.<br /><span class="serif">Honest work.</span></h1>
+      </div>
+      <p class="lede">
+        Forthmark Systems is a digital solutions and business systems practice. We
+        help small and growing organisations replace fragile manual processes with
+        clear, dependable systems, and present themselves properly online.
+      </p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container split">
+      <div class="sticky-head">
+        <p class="eyebrow">What we are</p>
+        <h2 class="h2">A partner for the work behind the work.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Many businesses do not need another vendor with a template. They need
+          someone who will look at how the operation actually runs, say what is
+          causing the friction, and build the smallest system that removes it.
+        </p>
+        <p>
+          That is the work Forthmark Systems does. We design and implement websites,
+          business systems and custom digital solutions. Sometimes the right answer
+          is a better public site. Sometimes it is an internal tool. Often it is
+          both, delivered in an order that makes sense.
+        </p>
+        <p>
+          We work with SMEs and growing organisations across sectors, in Nigeria and
+          remotely. The common thread is not industry. It is a willingness to look
+          honestly at a process and change it.
+        </p>
+
+        <div class="fact-row">
+          <div class="fact">
+            <div class="fact__label">Focus</div>
+            <div class="fact__value">Websites, systems, custom builds</div>
+          </div>
+          <div class="fact">
+            <div class="fact__label">Clients</div>
+            <div class="fact__value">SMEs and growing organisations</div>
+          </div>
+          <div class="fact">
+            <div class="fact__label">Reach</div>
+            <div class="fact__value">Nigeria and remote</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper2">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <p class="eyebrow">Principles</p>
+          <h2 class="h2">How we decide what to build.</h2>
+          <p class="lede">
+            These principles are practical. They shape scope, design and the
+            conversations we have when a project starts to drift.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid--3">
+        {
+          principles.map((principle) => (
+            <article class="card">
+              <h3>{principle.title}</h3>
+              <p>{principle.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Disciplines</p>
+        <h2 class="h2">Three connected areas.</h2>
+        <p class="lede mt-1">
+          Most engagements sit mainly in one area, with edges that touch the other
+          two. We scope the edges rather than pretending they do not exist.
+        </p>
+      </div>
+      <div class="grid">
+        {
+          disciplines.map((item) => (
+            <article class="card">
+              <span class="card__num">{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))
+        }
+        <a class="text-link" href="/services">
+          Explore services <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ink">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Evidence</p>
+        <h2 class="h2">What we show, and what we do not.</h2>
+      </div>
+      <div>
+        <p class="lede">
+          The portfolio contains one live client deployment and two clearly labelled
+          concept demonstrations. That is the honest picture of the work so far.
+        </p>
+        <ul class="check-list mt-2">
+          <li>Culia Autos screenshots come from the production site and a local admin copy using fictional records.</li>
+          <li>Concept demos use invented businesses, people and transactions, and say so on every screen.</li>
+          <li>We do not publish testimonials, client counts, awards or performance metrics we cannot substantiate.</li>
+          <li>Features that cannot be verified are omitted rather than described in vague terms.</li>
+        </ul>
+        <div class="btn-row mt-3">
+          <a class="btn btn--light" href="/work">
+            See the evidence <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand
+    title="A straightforward conversation."
+    text="Tell us what is slowing the business down. We will tell you what we would do, what we would not do, and what it would take to start."
+    primaryLabel="Discuss a project"
+    secondaryLabel="How we work"
+    secondaryHref="/how-we-work"
+  />
+</BaseLayout>

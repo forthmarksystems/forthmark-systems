@@ -1,0 +1,290 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Shot from "../../components/Shot.astro";
+import CtaBand from "../../components/CtaBand.astro";
+---
+
+<BaseLayout
+  title="Business Operations System Concept Demo"
+  description="A working concept demonstration of an SME operations system: customers, inventory, orders, tasks, reporting and settings. Built by Forthmark Systems with fictional data."
+  image="/images/work/ops-preview.png"
+>
+  <header class="page-head">
+    <div class="container">
+      <span class="chip chip--concept">Concept demonstration</span>
+      <div class="page-head__grid mt-2">
+        <div>
+          <p class="eyebrow">Concept demo / Business operations</p>
+          <h1 class="h1">Business operations system</h1>
+        </div>
+        <p class="lede">
+          A working demo of the operational core many growing businesses need:
+          customer records, stock, orders, tasks and reporting in one place. Every
+          record is fictional.
+        </p>
+      </div>
+
+      <div class="fact-row">
+        <div class="fact">
+          <div class="fact__label">Type</div>
+          <div class="fact__value">Concept demonstration</div>
+        </div>
+        <div class="fact">
+          <div class="fact__label">Data</div>
+          <div class="fact__value">Fictional, stored locally</div>
+        </div>
+        <div class="fact">
+          <div class="fact__label">Scope</div>
+          <div class="fact__value">Customers, stock, orders, tasks, reports</div>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/demos/operations/">
+          Open the working demo <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="btn btn--ghost" href="/contact">Discuss similar work</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="callout callout--concept">
+        <p>
+          <strong>This is not a client deployment.</strong> Northline Supply Co. is
+          an invented business. The customers, products, orders, tasks and figures
+          are fictional and exist only to demonstrate how the system behaves. No
+          real company data is used.
+        </p>
+      </div>
+
+      <div class="mt-3">
+        <Shot
+          src="/images/work/ops-preview.png"
+          alt="Operations demo dashboard showing revenue, open orders, low stock, tasks due, a six month revenue chart and recent orders"
+          caption="Dashboard: sales, open orders, stock attention and tasks due, calculated from the same fictional records."
+          tag="Concept demo"
+          wide
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container split">
+      <div class="sticky-head">
+        <p class="eyebrow">Overview</p>
+        <h2 class="h2">One place for the working truth.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          A growing business often runs on a spreadsheet for stock, a messaging
+          group for orders, an inbox for enquiries and one person's memory for
+          follow up. Each tool works in isolation. Together they create daily
+          reconciliation work and hide problems until they are expensive.
+        </p>
+        <p>
+          This demo shows a different arrangement. A customer is recorded once. A
+          product has one stock figure. An order references both and changes status
+          as it moves. Tasks carry owners and due dates. The dashboard and reports
+          read from the same records rather than asking someone to rebuild the
+          numbers each month.
+        </p>
+        <p>
+          The interaction is real. You can search, filter, edit, change statuses,
+          adjust stock, add records, export CSV files and reset the workspace. State
+          is held in your browser so the demo survives a page refresh without a
+          server.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper2">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <p class="eyebrow">What it covers</p>
+          <h2 class="h2">The unglamorous core.</h2>
+          <p class="lede">
+            The demo is deliberately ordinary. These are the records most small
+            businesses actually need before anything advanced.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card">
+          <h3>Customers</h3>
+          <p>
+            Contact records with company, segment and history. Search and filter,
+            then open a customer to see the orders attached to them.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Inventory</h3>
+          <p>
+            Products with SKU, category, price, stock and reorder level. Stock can
+            be adjusted in one click, and low or out of stock items are flagged.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Orders</h3>
+          <p>
+            Orders link to a customer and several products. Status moves through
+            pending, processing, fulfilled or cancelled, and totals are calculated
+            from the line items.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Tasks</h3>
+          <p>
+            Work with an owner, priority and due date. Overdue items rise to the
+            top so the team can see what needs attention without a meeting.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Reports</h3>
+          <p>
+            Revenue, order counts, stock exposure and task completion, generated
+            from the same records. A summary can be exported as CSV.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Settings</h3>
+          <p>
+            Business name, operations email and currency. Change them and the
+            workspace updates. A reset returns the demo to its seeded state.
+          </p>
+        </article>
+      </div>
+
+      <div class="gallery mt-3">
+        <Shot
+          src="/images/work/ops-inventory.png"
+          alt="Inventory view of the operations demo with product search, category filter, stock counts, reorder levels and stock adjustment buttons"
+          caption="Inventory: stock levels, reorder points and direct adjustment controls."
+          tag="Concept demo"
+        />
+        <Shot
+          src="/images/work/ops-orders.png"
+          alt="Orders table in the operations demo showing order numbers, fictional customers, dates, totals, status selectors and view buttons"
+          caption="Orders: status changes happen in the list, with line item detail available per order."
+          tag="Concept demo"
+        />
+        <Shot
+          src="/images/work/ops-reports.png"
+          alt="Reports view with revenue by month, order status counts, top products and stock exposure"
+          caption="Reports: the same records summarised without a separate spreadsheet."
+          tag="Concept demo"
+          wide
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Interactions</p>
+        <h2 class="h2">What actually works.</h2>
+        <p class="lede mt-1">
+          The demo is not a clickable image. These actions change the stored state
+          and are reflected across the views.
+        </p>
+      </div>
+      <div>
+        <ul class="check-list">
+          <li>Search and filter customers, products and orders.</li>
+          <li>Add or edit a customer, product or task.</li>
+          <li>Change an order status and see the dashboard totals respond.</li>
+          <li>Increase or reduce stock, with low stock warnings recalculated.</li>
+          <li>Mark a task complete and update the due task count.</li>
+          <li>Export orders or a report summary as a CSV file.</li>
+          <li>Reset the demo to the original fictional dataset.</li>
+        </ul>
+        <div class="callout mt-2">
+          <p>
+            <strong>Data handling:</strong> records are stored in this browser
+            using localStorage. Nothing is sent to a server, and clearing browser
+            storage or resetting the demo removes your changes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper2">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Boundaries</p>
+        <h2 class="h2">What this demo is not.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          A concept demo should be honest about its limits. This one is a front end
+          prototype with local state. It does not include the parts a production
+          deployment would require.
+        </p>
+        <ul>
+          <li>No login, roles or permissions. Anyone with the page can change the demo data.</li>
+          <li>No server or shared database. Two browsers do not see the same records.</li>
+          <li>No payment processing, invoicing or accounting integration.</li>
+          <li>No email, SMS or WhatsApp notifications.</li>
+          <li>No stock reservation during checkout, because there is no checkout.</li>
+          <li>No audit trail or record recovery beyond resetting the demo.</li>
+        </ul>
+        <p class="small">
+          These are scope decisions, not hidden gaps. A real engagement would agree
+          which of them matter, then build and test them properly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">From demo to deployment</p>
+        <h2 class="h2">How this maps to real work.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          A production version starts with the same questions the demo answers:
+          what is a customer, what is a product, how does an order move, who owns a
+          task, and which numbers does management actually read?
+        </p>
+        <p>
+          From there, a real build adds authentication, a shared database,
+          role based access, validation, backups, email notifications and the
+          specific rules of the business. The interface patterns demonstrated here
+          remain useful, but they are the starting point rather than the finish.
+        </p>
+        <div class="callout mt-2">
+          <p>
+            <strong>Technology note.</strong> The demo is built with Astro and
+            vanilla JavaScript, with no framework runtime. CSV exports are generated
+            in the browser and state is stored locally.
+          </p>
+        </div>
+        <div class="btn-row mt-3">
+          <a class="btn btn--primary" href="/demos/operations/">
+            Try the demo <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="btn btn--ghost" href="/work/programme-platform">
+            See the programme demo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand
+    title="Need a system that matches how you work?"
+    text="Bring the spreadsheet, the process and the exceptions. We will help you decide what the first useful release should contain."
+    primaryLabel="Discuss a project"
+    secondaryLabel="All work"
+    secondaryHref="/work"
+  />
+</BaseLayout>

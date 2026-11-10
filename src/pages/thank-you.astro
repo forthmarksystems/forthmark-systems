@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Enquiry received"
+  description="Thank you for contacting Forthmark Systems."
+  noindex
+>
+  <section class="section">
+    <div class="container container--narrow">
+      <p class="eyebrow">Enquiry received</p>
+      <h1 class="h1">Thank you.<br /><span class="serif">We have your note.</span></h1>
+      <p class="lede mt-2">
+        Your enquiry has been recorded. We will read it and reply by email. If the
+        problem is outside what we do, we will say so plainly and point you toward
+        a better route where we can.
+      </p>
+
+      <div class="callout mt-3">
+        <p>
+          <strong>If the matter is urgent,</strong> reply to the confirmation email
+          with the word urgent in the subject line, or write directly to
+          <a href="mailto:hello@forthmarksystems.com">hello@forthmarksystems.com</a>.
+        </p>
+      </div>
+
+      <div class="btn-row mt-3">
+        <a class="btn btn--primary" href="/work">
+          See our work <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="btn btn--ghost" href="/">Back to home</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

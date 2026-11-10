@@ -1,0 +1,186 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CtaBand from "../components/CtaBand.astro";
+
+const sectors = [
+  {
+    name: "Training, education and membership",
+    problem:
+      "Applications arrive through several channels, cohorts are tracked in spreadsheets, and attendance or progress is hard to prove at the end.",
+    build:
+      "Application review, participant records, cohort and session planning, attendance, progress notes, certificate eligibility and a summary report.",
+    demo: "/work/programme-platform",
+  },
+  {
+    name: "Professional services",
+    problem:
+      "Enquiries sit in inboxes, proposals are rebuilt each time, and nobody can see which client work is active, waiting or overdue.",
+    build:
+      "Enquiry and proposal tracking, client records, document collection, task ownership, deadlines and simple utilisation reporting.",
+  },
+  {
+    name: "Retail, distribution and e-commerce",
+    problem:
+      "Stock records disagree with reality, orders are spread across messages, and slow moving items are only noticed after they pile up.",
+    build:
+      "Product and stock control, low stock alerts, orders, customer history, supplier records and sales or margin reporting.",
+    demo: "/work/operations-system",
+  },
+  {
+    name: "Hospitality and events",
+    problem:
+      "Bookings, availability and guest details live in different places, so double bookings and missed follow ups happen under pressure.",
+    build:
+      "Availability and booking records, guest communication, deposits or payment status, supplier lists and event checklists.",
+  },
+  {
+    name: "Logistics and field operations",
+    problem:
+      "Jobs are allocated by phone, status updates arrive late, and proof of delivery is scattered across photos and messages.",
+    build:
+      "Job allocation, status tracking, delivery records, field notes, exception handling and operational reporting.",
+  },
+  {
+    name: "Automotive and equipment",
+    problem:
+      "Inventory changes faster than the website, enquiries are not followed up, and service or inspection history is hard to retrieve.",
+    build:
+      "Inventory and listings, reservations, enquiry records, inspection notes, service history and payment status where a payment step exists.",
+  },
+];
+
+const patterns = [
+  {
+    title: "The work is real, but the record is not",
+    text: "The team knows what happened. The system does not. When one person is away, the business loses visibility.",
+  },
+  {
+    title: "Too many places to look",
+    text: "A spreadsheet, a messaging group, a notebook and an inbox each hold part of the truth. Reconciliation takes time that should go to customers.",
+  },
+  {
+    title: "The public site and the back office disagree",
+    text: "A price changes in the office but not online, or a product is sold but still listed. The gap costs trust.",
+  },
+  {
+    title: "Reporting is a monthly reconstruction",
+    text: "Numbers are assembled by hand from several sources, arrive late, and are difficult to defend when a decision depends on them.",
+  },
+];
+---
+
+<BaseLayout
+  title="Industries"
+  description="Forthmark Systems works across training and membership, professional services, retail, hospitality, logistics and automotive operations, with a process led approach rather than a fixed industry template."
+>
+  <header class="page-head">
+    <div class="container page-head__grid">
+      <div>
+        <p class="eyebrow">Industries</p>
+        <h1 class="h1">Operations first.<br />Industry second.</h1>
+      </div>
+      <p class="lede">
+        The surface details differ by sector. The underlying problems repeat:
+        records that disagree, work that is invisible, and reporting that takes too
+        long. We start with the process, then adapt the system to the industry.
+      </p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <p class="eyebrow">Sectors</p>
+          <h2 class="h2">Where the same problems show up.</h2>
+          <p class="lede">
+            These are the sectors we understand best. The list is not a limit. If
+            the operational problem is clear, the industry label matters less than
+            the process behind it.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid--3">
+        {
+          sectors.map((sector) => (
+            <article class="card">
+              <h3>{sector.name}</h3>
+              <p>{sector.problem}</p>
+              <p class="small mt-1"><strong>What we might build:</strong> {sector.build}</p>
+              {sector.demo && (
+                <a class="text-link mt-1" href={sector.demo}>
+                  Related concept demo <span class="arrow" aria-hidden="true">&rarr;</span>
+                </a>
+              )}
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper2">
+    <div class="container split">
+      <div class="sticky-head">
+        <p class="eyebrow">Patterns</p>
+        <h2 class="h2">What usually needs fixing.</h2>
+        <p class="lede mt-1">
+          Before recommending software, we look for the point where information
+          breaks down. That is usually where the cost sits.
+        </p>
+      </div>
+      <div class="grid grid--2">
+        {
+          patterns.map((pattern) => (
+            <article class="card">
+              <h3>{pattern.title}</h3>
+              <p>{pattern.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Sector context</p>
+        <h2 class="h2">What changes by industry.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          The data model, the language on screen and the rules that matter change.
+          A training provider needs cohorts, sessions and certificate eligibility. A
+          dealership needs listings, reservations and inspection notes. A logistics
+          business needs jobs, routes and proof of delivery.
+        </p>
+        <p>
+          What does not change is the standard: one record for each real thing, a
+          clear next action, access that matches the role, and a report that can be
+          trusted without rebuilding it by hand.
+        </p>
+        <ul>
+          <li>We learn the vocabulary your team actually uses.</li>
+          <li>We test the workflow with the people who do the work.</li>
+          <li>We keep the first release narrow enough to finish properly.</li>
+          <li>We document the rules that are not obvious from the screen.</li>
+        </ul>
+        <p class="small">
+          Where a sector has licensing, regulatory or financial reporting duties,
+          those remain the responsibility of the business and its professional
+          advisers. We build operational tools, not compliance certification.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand
+    title="Your sector is not on the list?"
+    text="Describe the process that is causing friction. If we are not the right fit, we will say so and suggest a better route."
+    primaryLabel="Discuss a project"
+    secondaryLabel="See our work"
+    secondaryHref="/work"
+  />
+</BaseLayout>

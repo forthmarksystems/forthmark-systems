@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Page not found"
+  description="The page you requested could not be found."
+  noindex
+>
+  <section class="section">
+    <div class="container container--narrow">
+      <p class="eyebrow">404</p>
+      <h1 class="h1">This page<br /><span class="serif">is not here.</span></h1>
+      <p class="lede mt-2">
+        The address may be mistyped, or the page may have moved. These routes will
+        get you back to something useful.
+      </p>
+
+      <div class="btn-row mt-3">
+        <a class="btn btn--primary" href="/">
+          Home <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="btn btn--ghost" href="/work">Our work</a>
+        <a class="btn btn--ghost" href="/contact">Contact</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

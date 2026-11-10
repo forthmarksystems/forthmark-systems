@@ -1,0 +1,174 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CtaBand from "../components/CtaBand.astro";
+
+const steps = [
+  {
+    title: "Understand the work",
+    text: "We look at how the process runs today, including the exceptions that never appear in a tidy brief. The aim is to find where information is lost, duplicated or rebuilt by hand.",
+    detail: "Output: a short written summary of the current process and the real constraint.",
+  },
+  {
+    title: "Agree the scope",
+    text: "We choose the smallest release that solves the problem properly. Assumptions, exclusions and acceptance criteria are written down before build work starts.",
+    detail: "Output: a scope document with phases, responsibilities and a clear definition of done.",
+  },
+  {
+    title: "Design the flow",
+    text: "Screens follow the order work actually happens. We design the customer journey and the internal workflow together, because a public site is only as good as the records behind it.",
+    detail: "Output: page and screen structure, key states, and the data the system needs to hold.",
+  },
+  {
+    title: "Build in phases",
+    text: "The first release goes live as early as it sensibly can. Later phases add depth without forcing the team to wait months for something useful.",
+    detail: "Output: working software in a staging environment, reviewed against real tasks.",
+  },
+  {
+    title: "Test with real tasks",
+    text: "We test the awkward cases: a cancelled booking, a sold item, a duplicated record, a failed payment, a user without permission. A demo that only works on the happy path is not finished.",
+    detail: "Output: a tested release, a defect list, and fixes verified before handover.",
+  },
+  {
+    title: "Hand over and support",
+    text: "You receive access, documentation and a walkthrough of the routine tasks. Support covers faults and small adjustments; new scope is quoted separately.",
+    detail: "Output: admin access, written guides, a training session where needed, and a support route.",
+  },
+];
+
+const needs = [
+  "A named person who can approve scope and decisions.",
+  "Access to the people who do the work day to day.",
+  "Examples of current records, with sensitive details removed.",
+  "Honesty about constraints: budget, deadline, internal capacity.",
+  "A decision on who owns domains, accounts and source files.",
+];
+
+const limits = [
+  "We do not promise rankings, traffic or sales figures we cannot control.",
+  "We do not take over a process we cannot see or test.",
+  "We do not hide recurring costs inside a build quote.",
+  "We do not treat a launch as the end of the work.",
+];
+---
+
+<BaseLayout
+  title="How We Work"
+  description="Forthmark Systems works in clear phases: understand the process, agree the scope, design the flow, build in phases, test with real tasks, then hand over with documentation."
+>
+  <header class="page-head">
+    <div class="container page-head__grid">
+      <div>
+        <p class="eyebrow">How we work</p>
+        <h1 class="h1">Calm delivery.<br />Clear handover.</h1>
+      </div>
+      <p class="lede">
+        Most project failures are not technical. They come from a vague scope, a
+        missing decision, or a system nobody was trained to use. Our process is
+        designed to remove those risks early.
+      </p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <p class="eyebrow">The process</p>
+          <h2 class="h2">Six phases, each with an output.</h2>
+          <p class="lede">
+            The sequence is deliberate. Design starts after the problem is clear,
+            and build starts after the scope is agreed in writing.
+          </p>
+        </div>
+      </div>
+
+      <div class="process">
+        {
+          steps.map((step, index) => (
+            <article class="process__item">
+              <span class="process__num">0{index + 1}</span>
+              <div>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </div>
+              <p class="process__detail">{step.detail}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper2">
+    <div class="container split--even split">
+      <div>
+        <p class="eyebrow">Working together</p>
+        <h2 class="h2">What we need from you.</h2>
+        <p class="lede mt-1">
+          A build goes faster when decisions have an owner. These five things make
+          the biggest difference.
+        </p>
+        <ul class="check-list mt-2">
+          {needs.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Boundaries</p>
+        <h2 class="h2">What we will not do.</h2>
+        <p class="lede mt-1">
+          Clear limits protect both sides. These are stated at the start, not
+          discovered at the end.
+        </p>
+        <ul class="check-list mt-2">
+          {limits.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="sticky-head">
+        <p class="eyebrow">Engagement shape</p>
+        <h2 class="h2">Small enough to start. Solid enough to keep.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          We prefer phased engagements. A first phase might be a focused website
+          with a working enquiry route, or a single operational workflow that
+          replaces a fragile spreadsheet. Later phases can add inventory, bookings,
+          reporting or integration once the first release is proven in daily use.
+        </p>
+        <p>
+          Every project is quoted after scoping. There is no fixed package price
+          because the useful scope differs enormously between a five page corporate
+          site and a multi role operational system. If a standard tool solves the
+          problem for less, we will recommend it.
+        </p>
+        <h3>What a handover includes</h3>
+        <ul>
+          <li>Admin access with the right roles for the people who need it.</li>
+          <li>Written notes for routine tasks: adding, editing, publishing, archiving.</li>
+          <li>A walkthrough of the workflow, recorded where useful.</li>
+          <li>A list of what is deliberately out of scope, so expectations stay accurate.</li>
+          <li>A clear route for faults and small changes after launch.</li>
+        </ul>
+        <div class="callout mt-2">
+          <p>
+            <strong>On timelines:</strong> a date is only given after the scope is
+            agreed. If a fixed deadline matters, say so at the start so the scope
+            can be shaped around it rather than promised against it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand
+    title="Start with a short conversation."
+    text="Bring the process as it is. We will ask questions, point out the real constraint, and tell you whether a website, a system or a smaller fix is the sensible next step."
+    primaryLabel="Discuss a project"
+    secondaryLabel="Read a case study"
+    secondaryHref="/work/culia-autos"
+  />
+</BaseLayout>
