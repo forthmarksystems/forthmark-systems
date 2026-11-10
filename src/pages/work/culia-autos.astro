@@ -1,0 +1,411 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Shot from "../../components/Shot.astro";
+import CtaBand from "../../components/CtaBand.astro";
+---
+
+<BaseLayout
+  title="Culia Autos Case Study"
+  description="How Forthmark Systems built the Culia Autos vehicle discovery website and admin system: inventory, saved cars, comparison, paid consultation booking, and client handover."
+  image="/images/work/culia-public-home.png"
+>
+  <header class="page-head">
+    <div class="container">
+      <span class="chip chip--real">Live client project</span>
+      <div class="page-head__grid mt-2">
+        <div>
+          <p class="eyebrow">Case study / Automotive retail</p>
+          <h1 class="h1">Culia Autos</h1>
+        </div>
+        <p class="lede">
+          A vehicle discovery and consultation platform for a Lagos car
+          dealership, with a public website and an admin system the client uses to
+          run inventory, bookings and customer interest after handover.
+        </p>
+      </div>
+
+      <div class="fact-row">
+        <div class="fact">
+          <div class="fact__label">Client</div>
+          <div class="fact__value">Culia Autos, Lagos</div>
+        </div>
+        <div class="fact">
+          <div class="fact__label">Status</div>
+          <div class="fact__value">Live in production</div>
+        </div>
+        <div class="fact">
+          <div class="fact__label">Scope</div>
+          <div class="fact__value">Website, admin, payments, handover</div>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <a
+          class="btn btn--primary"
+          href="https://www.culiaautos.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit the live site <span class="arrow" aria-hidden="true">&nearr;</span>
+        </a>
+        <a class="btn btn--ghost" href="/contact">Discuss similar work</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--tight">
+    <div class="container">
+      <Shot
+        src="/images/work/culia-public-home.png"
+        alt="Culia Autos production homepage with a blue banner, Find My Car, Browse Cars and Book a Consultation buttons, and featured vehicle cards"
+        caption="Production homepage. Vehicle discovery is the first action, with consultation booking kept visible in the header on every page."
+        tag="Production site"
+        wide
+      />
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container split">
+      <div class="sticky-head">
+        <p class="eyebrow">Overview</p>
+        <h2 class="h2">A showroom that stays current.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Culia Autos sells cars in Lagos. Buyers need to see what is genuinely
+          available, understand the condition and specification, and speak to
+          someone without a long chain of messages. The dealership needs the same
+          inventory to be easy to maintain, and a reliable record of the people
+          who are interested.
+        </p>
+        <p>
+          Forthmark Systems designed and built a public vehicle discovery site and
+          the operational admin system behind it. The public side handles browsing,
+          saving, comparison and paid consultation booking. The admin side handles
+          listings, images, shop order, bookings, leads, saved interest and payment
+          status.
+        </p>
+        <p>
+          The project was delivered as one connected product rather than a website
+          with a separate spreadsheet behind it. That is what makes handover
+          practical: the client updates the inventory once, and the public site
+          reflects it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper2">
+    <div class="container split">
+      <div class="sticky-head">
+        <p class="eyebrow">The challenge</p>
+        <h2 class="h2">Interest was real. The process around it was manual.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Car buyers rarely decide in one visit. They compare a few options, ask
+          about condition and mileage, save the ones they like, and come back
+          later. When that happens across phone calls and messaging apps, details
+          get lost and the team cannot tell which cars are attracting serious
+          interest.
+        </p>
+        <ul>
+          <li>
+            The public inventory had to be easy to keep current, including cars
+            that were reserved or sold.
+          </li>
+          <li>
+            Buyers needed a clearer way to narrow the catalogue, revisit saved
+            cars and compare options side by side.
+          </li>
+          <li>
+            Consultation bookings needed a schedule, a record of the topic, and a
+            payment step that reduced casual no-shows.
+          </li>
+          <li>
+            The client needed to run routine updates without asking a developer
+            each time a price changed or a car was sold.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <p class="eyebrow">Customer experience</p>
+          <h2 class="h2">Browse, narrow down, book.</h2>
+          <p class="lede">
+            The public site is built around the way a buyer actually shops. Each
+            screen has one clear next action, and the same actions remain usable on
+            a phone.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card">
+          <h3>Find and filter</h3>
+          <p>
+            Search by make or model, then narrow by price, condition, body, gear,
+            fuel and location. A guided Find My Car flow collects budget, purpose
+            and passenger needs.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Save and compare</h3>
+          <p>
+            Signed in customers can save cars and compare up to three at once.
+            Comparison puts price, year, condition, mileage, body, engine,
+            drivetrain and location in one table.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Book with intent</h3>
+          <p>
+            Buyers choose a consultation topic, date and time, then pay the fee
+            before the booking is confirmed. The record includes the topic and
+            contact details for the team.
+          </p>
+        </article>
+      </div>
+
+      <div class="gallery mt-3">
+        <Shot
+          src="/images/work/culia-public-inventory.png"
+          alt="Culia Autos Browse Cars page with search, price, condition and body filters, and vehicle cards with View Car and Compare buttons"
+          caption="Browse Cars. Filters are visible rather than hidden behind a search box, and the saved state is available on each card."
+          tag="Production site"
+        />
+        <Shot
+          src="/images/work/culia-public-car-detail-details.png"
+          alt="Culia Autos vehicle detail page showing price, specification table, an unconfirmed specification warning, and inspection and consultation buttons"
+          caption="Vehicle detail with a specification table, a clear warning when specs are unconfirmed, and inspection and consultation actions."
+          tag="Production site"
+        />
+        <Shot
+          src="/images/work/culia-public-saved.png"
+          alt="Culia Autos saved cars page showing three saved vehicles with View Car and Compare buttons"
+          caption="Saved cars. The account shown is a fictional demo account; the vehicle listings are from the live catalogue."
+          tag="Demo account"
+        />
+        <Shot
+          src="/images/work/culia-public-compare.png"
+          alt="Culia Autos comparison table showing three vehicles side by side with price, year, condition, body, drivetrain and location"
+          caption="Comparison of up to three vehicles, with differences visible in one table."
+          tag="Production site"
+        />
+        <Shot
+          src="/images/work/culia-public-consult.png"
+          alt="Culia Autos consultation booking page with topic selector and a November 2026 date calendar"
+          caption="Consultation booking starts with the topic and date. Closed days are visibly unavailable."
+          tag="Production site"
+        />
+        <Shot
+          src="/images/work/culia-public-consult-calendar.png"
+          alt="Culia Autos consultation form showing contact fields, a consultation fee and a Pay 10,000 Naira and Book button"
+          caption="The fee and the rule that a booking only counts after payment are stated before checkout."
+          tag="Production site"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper2">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <p class="eyebrow">Admin and CMS</p>
+          <h2 class="h2">The client can run the day to day.</h2>
+          <p class="lede">
+            The admin system is custom built for Culia's workflow. It is not a
+            generic CMS, so the screens use the language of the business: cars,
+            shop order, bookings, interest and leads.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card">
+          <h3>Inventory</h3>
+          <p>
+            Add a listing with photos, price, condition, specifications, features
+            and status. Edit it later, archive it, or change it to reserved or sold.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Presentation</h3>
+          <p>
+            Control the order buyers see under Recommended, so the strongest or
+            most current stock is not buried by the newest upload date.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Workflow</h3>
+          <p>
+            Review bookings with their date, time, topic, payment status and
+            outcome notes. See saved interest and abandoned booking intents.
+          </p>
+        </article>
+      </div>
+
+      <div class="callout callout--concept mt-3">
+        <p>
+          <strong>About these admin screenshots.</strong> They were captured from a
+          local copy of the admin system populated with fictional demo records. The
+          interface is the real implementation. Names, phone numbers, emails,
+          booking references and amounts are demo data. No production customer or
+          payment data is shown.
+        </p>
+      </div>
+
+      <div class="gallery mt-3">
+        <Shot
+          src="/images/work/culia-admin-dashboard.png"
+          alt="Culia Autos admin dashboard with available, reserved and sold car totals, upcoming bookings and new leads"
+          caption="Admin dashboard: stock totals, upcoming bookings, leads by source and the newest leads that need a call."
+          tag="Demo data"
+        />
+        <Shot
+          src="/images/work/culia-admin-vehicles.png"
+          alt="Culia Autos admin car list with search, reorder, add car, edit and archive controls"
+          caption="Inventory list with search, add, reorder, edit and archive. Status is shown on each listing."
+          tag="Demo data"
+        />
+        <Shot
+          src="/images/work/culia-admin-add-vehicle.png"
+          alt="Culia Autos add car form with fields for make, model, price, condition, status, specification and description"
+          caption="Add car: a structured listing form rather than free text, which keeps the public pages consistent."
+          tag="Demo data"
+        />
+        <Shot
+          src="/images/work/culia-admin-edit-vehicle.png"
+          alt="Culia Autos edit car screen showing an existing Toyota Tacoma listing with price, status and specification fields"
+          caption="Edit car: the same form handles routine changes, including status changes to reserved or sold."
+          tag="Demo data"
+        />
+        <Shot
+          src="/images/work/culia-admin-reorder.png"
+          alt="Culia Autos shop order screen with numbered vehicle rows and move up and move down buttons"
+          caption="Shop order: the client controls the order buyers see. New cars appear at the end until positioned."
+          tag="Demo data"
+        />
+        <Shot
+          src="/images/work/culia-admin-bookings.png"
+          alt="Culia Autos bookings list showing dates, times, topics, fictional customer names, paid status and outcome fields"
+          caption="Bookings schedule: date, time, topic, customer, payment status, booking status and outcome notes."
+          tag="Demo data"
+        />
+        <Shot
+          src="/images/work/culia-admin-interest.png"
+          alt="Culia Autos interest screen listing which fictional customers saved which cars, and abandoned booking attempts"
+          caption="Interest: who saved which cars, plus visitors who picked a time but did not complete payment."
+          tag="Demo data"
+        />
+        <Shot
+          src="/images/work/culia-admin-leads.png"
+          alt="Culia Autos leads list with fictional customer names, phone numbers, lead source, status and follow up dates"
+          caption="Leads: source, status and follow up date, so enquiries are not lost between calls."
+          tag="Demo data"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Handover</p>
+        <h2 class="h2">Less dependence on the developer.</h2>
+        <p class="lede mt-1">
+          The admin system is designed for handover, not for a technical operator.
+          Routine work is grouped where the team expects it, destructive actions
+          are deliberate, and saved changes give immediate feedback.
+        </p>
+      </div>
+      <div>
+        <ul class="check-list">
+          <li>Add a vehicle, upload images and publish it to the site.</li>
+          <li>Edit price, description, specification or status at any time.</li>
+          <li>Reorder the shop so the right cars lead the catalogue.</li>
+          <li>Mark a car reserved or sold, or archive it entirely.</li>
+          <li>Review the consultation schedule and update booking outcomes.</li>
+          <li>See which customers saved a car and follow up with interested buyers.</li>
+          <li>See whether a consultation fee was paid, and the amount recorded.</li>
+        </ul>
+        <div class="callout mt-2">
+          <p>
+            <strong>What still needs Forthmark:</strong> new integrations,
+            structural changes to the data model, pricing or booking rule changes,
+            and major design work. Routine content and operations do not.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper2">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Payments</p>
+        <h2 class="h2">Payment collection, not accounting.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Paystack is used to collect the consultation fee at the point of
+          booking. The payment is verified server side before a booking is
+          accepted, and the admin shows whether a booking is paid and the amount
+          recorded.
+        </p>
+        <p>
+          This is not a full accounting or reconciliation system. It does not
+          replace settlement reports, refund handling, tax records or a finance
+          package. Those remain separate business processes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Role and technology</p>
+        <h2 class="h2">Forthmark's responsibilities.</h2>
+      </div>
+      <div>
+        <ul class="check-list">
+          <li>Scoping the public journey and the internal admin workflow with the client.</li>
+          <li>Interface design and information architecture for both sides of the product.</li>
+          <li>Full implementation of the website, admin system and database model.</li>
+          <li>Saved cars, comparison, consultation booking and payment verification.</li>
+          <li>Optional Google Calendar and Meet links for confirmed consultations.</li>
+          <li>Testing, deployment and preparation of the admin system for handover.</li>
+        </ul>
+        <div class="callout mt-2">
+          <p>
+            <strong>Technology note.</strong> Next.js and TypeScript, PostgreSQL,
+            Paystack for payment collection and verification, Cloudflare R2 for
+            vehicle image storage, Resend for transactional email, and optional
+            Google Calendar integration. Admin access is role based, with separate
+            super admin, sales and content permissions.
+          </p>
+        </div>
+        <p class="small mt-2">
+          No admin credentials, customer records, payment references or private
+          system settings are published on this page.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand
+    title="Need a public site and a system behind it?"
+    text="We build the customer facing experience and the operational tools together, so updates happen once and the business sees the same truth."
+    primaryLabel="Discuss a project"
+    secondaryLabel="Explore services"
+    secondaryHref="/services"
+  />
+</BaseLayout>

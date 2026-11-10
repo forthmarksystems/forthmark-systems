@@ -1,0 +1,357 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CtaBand from "../components/CtaBand.astro";
+
+const services = [
+  {
+    num: "A",
+    title: "Website and digital presence",
+    text: "Clear, credible websites that help people understand what you do, trust you, and take the next step.",
+    items: [
+      "Business and corporate websites",
+      "E-commerce and catalogues",
+      "Booking and enquiry websites",
+      "Redesigns and content structure",
+    ],
+  },
+  {
+    num: "B",
+    title: "Business systems and automation",
+    text: "Practical systems for the work that happens every day: customers, stock, orders, bookings, reporting and follow up.",
+    items: [
+      "CRM and lead management",
+      "Inventory, orders and bookings",
+      "Workflow automation and integrations",
+      "Reporting dashboards",
+    ],
+  },
+  {
+    num: "C",
+    title: "Custom digital solutions",
+    text: "When an off the shelf tool cannot fit the way you work, we design and build the application around your process.",
+    items: [
+      "Web applications and portals",
+      "Member and programme platforms",
+      "Android, iOS and cross platform apps",
+      "Internal tools and dashboards",
+    ],
+  },
+];
+
+const industries = [
+  {
+    name: "Training, education and membership",
+    text: "Applications, cohorts, onboarding, attendance, progress and certification.",
+  },
+  {
+    name: "Professional services",
+    text: "Enquiries, proposals, client records, document collection and reporting.",
+  },
+  {
+    name: "Retail, distribution and e-commerce",
+    text: "Catalogues, inventory, orders, customer follow up and fulfilment visibility.",
+  },
+  {
+    name: "Hospitality and events",
+    text: "Bookings, availability, guest communication and supplier coordination.",
+  },
+  {
+    name: "Logistics and field operations",
+    text: "Job allocation, status tracking, delivery records and operational reporting.",
+  },
+  {
+    name: "Automotive and equipment",
+    text: "Inventory, inspections, reservations, service history and sales enquiries.",
+  },
+];
+
+const principles = [
+  {
+    title: "Scoped to the real problem",
+    text: "We start with the process that is slowing you down, not with a long list of features. The smallest dependable system that solves the problem is usually the right one.",
+  },
+  {
+    title: "Built for the people using it",
+    text: "A system only works if the team can use it without fear. Interfaces are kept clear, workflows are tested with real tasks, and admin screens are designed for daily use.",
+  },
+  {
+    title: "Handover is part of the work",
+    text: "You should not need a developer to update a price, add a product, publish a listing or check a booking. We document the system and train the people who will run it.",
+  },
+];
+---
+
+<BaseLayout
+  title="Forthmark Systems | Digital Solutions and Business Systems"
+  description="Forthmark Systems designs and implements websites, business systems and custom digital solutions for SMEs and growing organisations. Better systems. Greater efficiency."
+>
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow">Digital solutions and business systems</p>
+        <h1 class="display">
+          Better systems.<br />
+          <span class="serif">Greater efficiency.</span>
+        </h1>
+        <p class="lede">
+          We design and implement digital solutions and business systems that help
+          organisations simplify operations, work more efficiently, and grow.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="/contact">
+            Discuss a project <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="btn btn--ghost" href="/work">See our work</a>
+        </div>
+        <div class="hero__meta">
+          <span><strong>Live client work</strong> Culia Autos</span>
+          <span><strong>Concept demos</strong> clearly labelled</span>
+          <span><strong>Working</strong> in Nigeria and remotely</span>
+        </div>
+      </div>
+
+      <div class="hero__proof">
+        <div class="proof-card">
+          <div class="proof-card__top">
+            <div class="proof-card__dots" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="proof-card__label">Live client platform</span>
+          </div>
+          <img
+            src="/images/work/culia-admin-vehicles.png"
+            width="1400"
+            height="875"
+            alt="Culia Autos admin screen showing the vehicle inventory list with photos, prices, status and edit controls"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <div class="proof-card__foot">
+            <span><strong>Culia Autos</strong> inventory management</span>
+            <a class="text-link" href="/work/culia-autos">View case study</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper2" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <p class="eyebrow">01 / What we do</p>
+          <h2 class="h2" id="services-heading">
+            Three ways we help businesses work better.
+          </h2>
+          <p class="lede">
+            Some projects need a stronger website. Some need the operational
+            system behind it. Many need both, delivered in a sensible order.
+          </p>
+        </div>
+        <a class="text-link" href="/services">
+          Explore services <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="grid grid--3">
+        {
+          services.map((service) => (
+            <article class="card">
+              <span class="card__num">{service.num}</span>
+              <h3>{service.title}</h3>
+              <p>{service.text}</p>
+              <ul class="card__list">
+                {service.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="work-heading">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <p class="eyebrow">02 / Selected work</p>
+          <h2 class="h2" id="work-heading">
+            Real client work, shown as it is.
+          </h2>
+          <p class="lede">
+            One live client deployment, presented with real product screenshots.
+            Two concept demonstrations, clearly labelled and built with fictional
+            data to show how we approach common operational problems.
+          </p>
+        </div>
+        <a class="text-link" href="/work">
+          All work <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="work-grid">
+        <article class="work-card">
+          <div class="work-card__media">
+            <img
+              src="/images/work/culia-public-home.png"
+              width="1400"
+              height="875"
+              alt="Culia Autos homepage with a blue hero, vehicle search calls to action and featured cars"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="work-card__body">
+            <span class="chip chip--real">Live client project</span>
+            <h3>Culia Autos</h3>
+            <p>
+              A vehicle discovery and consultation platform for a Lagos car
+              dealership, with a full admin system for inventory, bookings,
+              customer interest and payment status.
+            </p>
+            <ul class="work-card__list">
+              <li>Customer browsing, saved cars and comparison</li>
+              <li>Paid consultation booking and scheduling</li>
+              <li>Inventory, bookings and interest management after handover</li>
+            </ul>
+            <a class="text-link" href="/work/culia-autos">
+              Read the case study <span class="arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </article>
+
+        <div class="grid grid--2 mt-2">
+          <article class="work-card">
+            <div class="work-card__media">
+              <img
+                src="/images/work/ops-preview.png"
+                width="1400"
+                height="900"
+                alt="Preview of the Forthmark operations system concept demo showing a sample dashboard"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="work-card__body">
+              <span class="chip chip--concept">Concept demonstration</span>
+              <h3>Business operations system</h3>
+              <p>
+                A working demo of the operational core many SMEs need: customers,
+                stock, orders, tasks and reporting in one place.
+              </p>
+              <a class="text-link" href="/work/operations-system">
+                View the demo <span class="arrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-card__media">
+              <img
+                src="/images/work/programme-preview.png"
+                width="1400"
+                height="900"
+                alt="Preview of the Forthmark programme and membership platform concept demo showing applicant records"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="work-card__body">
+              <span class="chip chip--concept">Concept demonstration</span>
+              <h3>Programme and membership platform</h3>
+              <p>
+                A working demo for training providers and membership
+                organisations: applications, onboarding, attendance, progress and
+                certification.
+              </p>
+              <a class="text-link" href="/work/programme-platform">
+                View the demo <span class="arrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="callout mt-3">
+        <p>
+          <strong>How to read this page:</strong> Culia Autos is a live deployment
+          with real screenshots from the production website and a local admin demo
+          using fictional records. The two operations demos are concept
+          demonstrations, not client deployments, and every name, order and
+          programme record inside them is fictional.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper2" aria-labelledby="industries-heading">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <p class="eyebrow">03 / Industries</p>
+          <h2 class="h2" id="industries-heading">
+            Operations first. Industry second.
+          </h2>
+          <p class="lede">
+            The same operational problems appear in different sectors. We bring a
+            process led approach and adapt the solution to your industry, rather
+            than forcing a template onto it.
+          </p>
+        </div>
+        <a class="text-link" href="/industries">
+          See industries <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="grid grid--3">
+        {
+          industries.map((industry) => (
+            <article class="card">
+              <h3>{industry.name}</h3>
+              <p>{industry.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="principles-heading">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <p class="eyebrow">04 / How we work</p>
+          <h2 class="h2" id="principles-heading">
+            Calm delivery, clear handover.
+          </h2>
+          <p class="lede">
+            Good systems are not just built. They are scoped honestly, tested with
+            real tasks, documented, and handed to the people who will use them.
+          </p>
+        </div>
+        <a class="text-link" href="/how-we-work">
+          Our process <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="grid grid--3">
+        {
+          principles.map((principle, index) => (
+            <article class="card">
+              <span class="card__num">0{index + 1}</span>
+              <h3>{principle.title}</h3>
+              <p>{principle.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CtaBand
+    title="Tell us what is slowing the business down."
+    text="You do not need a finished brief. A short description of the problem, the people involved and what you have tried is enough to start a useful conversation."
+  />
+</BaseLayout>

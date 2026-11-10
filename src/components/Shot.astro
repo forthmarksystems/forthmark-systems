@@ -1,0 +1,38 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  caption: string;
+  tag?: string;
+  width?: number;
+  height?: number;
+  wide?: boolean;
+}
+
+const {
+  src,
+  alt,
+  caption,
+  tag,
+  width = 1400,
+  height = 900,
+  wide = false,
+} = Astro.props;
+---
+
+<figure class:list={["shot", wide && "shot--wide"]}>
+  <div class="shot__frame">
+    <img
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+  <figcaption>
+    {tag && <span class="shot__tag">{tag}</span>}
+    <span>{caption}</span>
+  </figcaption>
+</figure>

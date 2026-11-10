@@ -1,0 +1,164 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CtaBand from "../../components/CtaBand.astro";
+---
+
+<BaseLayout
+  title="Our Work"
+  description="Forthmark Systems case studies: the live Culia Autos platform, plus clearly labelled concept demonstrations of an operations system and a programme management platform."
+>
+  <header class="page-head">
+    <div class="container page-head__grid">
+      <div>
+        <p class="eyebrow">Our work</p>
+        <h1 class="h1">Proof over<br />promises.</h1>
+      </div>
+      <p class="lede">
+        One live client deployment with real product screenshots. Two concept
+        demonstrations built to show how we approach common operational problems.
+        The distinction is marked on every card and every page.
+      </p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="work-grid">
+        <article class="work-card">
+          <div class="work-card__media">
+            <img
+              src="/images/work/culia-public-inventory.png"
+              width="1400"
+              height="875"
+              alt="Culia Autos vehicle inventory page with search filters and car cards showing prices and compare buttons"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <div class="work-card__body">
+            <span class="chip chip--real">Live client project</span>
+            <h3>Culia Autos</h3>
+            <p>
+              A vehicle discovery and consultation platform for a Lagos car
+              dealership. The public site helps buyers browse, save and compare
+              cars, then book a paid inspection or consultation. The admin system
+              lets the client run inventory, bookings, customer interest and
+              payment status without a developer.
+            </p>
+            <ul class="work-card__list">
+              <li>Public website and admin system in one deployment</li>
+              <li>Saved cars, comparison and paid consultation booking</li>
+              <li>Inventory, reordering, bookings and interest management</li>
+            </ul>
+            <a class="text-link" href="/work/culia-autos">
+              Read the Culia Autos case study
+              <span class="arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <div class="callout callout--concept mt-3">
+        <p>
+          <strong>About the concept demonstrations.</strong> The next two projects
+          are working software demos, not paid client deployments. They use
+          fictional businesses, people and records. They exist to make our
+          approach to common SME and programme operations tangible, and to show
+          the level of interaction we design into a system.
+        </p>
+      </div>
+
+      <div class="grid grid--2 mt-3">
+        <article class="work-card">
+          <div class="work-card__media">
+            <img
+              src="/images/work/ops-preview.png"
+              width="1400"
+              height="900"
+              alt="Dashboard preview of the business operations concept demo with revenue, orders and task summaries"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="work-card__body">
+            <span class="chip chip--concept">Concept demonstration</span>
+            <h3>Business operations system</h3>
+            <p>
+              A fictional supply business uses this demo to manage customer
+              records, products, stock, orders, tasks and a simple management
+              report. Searches, filters, status changes and stock adjustments all
+              work.
+            </p>
+            <a class="text-link" href="/work/operations-system">
+              Open the case study and demo
+              <span class="arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-card__media">
+            <img
+              src="/images/work/programme-preview.png"
+              width="1400"
+              height="900"
+              alt="Preview of the programme management concept demo showing applications and applicant statuses"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="work-card__body">
+            <span class="chip chip--concept">Concept demonstration</span>
+            <h3>Programme and membership platform</h3>
+            <p>
+              A fictional training provider uses this demo to review applications,
+              manage participants and cohorts, track onboarding and attendance,
+              assign tracks, check certificate eligibility and read a summary
+              report.
+            </p>
+            <a class="text-link" href="/work/programme-platform">
+              Open the case study and demo
+              <span class="arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper2">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Evidence standard</p>
+        <h2 class="h2">What you see is what was built.</h2>
+      </div>
+      <div>
+        <ul class="check-list">
+          <li>
+            Culia Autos screenshots are taken from the live production website
+            and from a local copy of the admin system populated with fictional
+            records. Personal details and payment references are not shown.
+          </li>
+          <li>
+            The concept demos run in the browser with fictional data stored
+            locally. They are not connected to a live client account, payment
+            provider or third party service.
+          </li>
+          <li>
+            We do not publish invented testimonials, client counts, awards or
+            performance metrics.
+          </li>
+          <li>
+            Features that cannot be verified are left out rather than described
+            loosely.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand
+    title="Have a process that needs a better system?"
+    text="Bring the problem as it is. We will help you decide what to build, what to configure, and what to leave alone."
+  />
+</BaseLayout>
