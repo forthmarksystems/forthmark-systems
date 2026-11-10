@@ -802,6 +802,96 @@ a:hover .arrow,
   }
 }
 
+/* Concept demo cards with three screenshots */
+.concept-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.concept-card__shots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+  padding: clamp(0.75rem, 2vw, 1rem);
+  border-bottom: 1px solid var(--line);
+  background: var(--paper-2);
+}
+
+.concept-shot {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin: 0;
+}
+
+.concept-shot:first-child {
+  grid-column: 1 / -1;
+}
+
+.concept-shot img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top left;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) - 2px);
+  background: var(--paper);
+}
+
+.concept-shot figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.concept-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(1.1rem, 2.5vw, 1.6rem);
+}
+
+.concept-card__body h3 {
+  margin-top: 0.8rem;
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+}
+
+.concept-card__body p {
+  margin-top: 0.75rem;
+  color: var(--muted);
+}
+
+.concept-card__body .text-link {
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 560px) {
+  .concept-card__shots {
+    display: flex;
+    gap: 0.6rem;
+    overflow-x: auto;
+    padding-bottom: 0.9rem;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 0.75rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .concept-shot {
+    flex: 0 0 86%;
+    scroll-snap-align: start;
+  }
+
+  .concept-shot:first-child {
+    grid-column: auto;
+  }
+}
+
 /* Chips and badges */
 .chip {
   display: inline-flex;

@@ -20,19 +20,19 @@ These are captures of the live production website at `https://www.culiaautos.com
 ## Culia Autos: admin system
 
 These are captures of a local copy of the real admin interface, populated with
-fictional records. Names, phone numbers, emails, booking references and amounts are
+sample records. Names, phone numbers, emails, booking references and amounts are
 demo data. No production customer or payment data is shown.
 
 | File | Screen | Notes |
 | --- | --- | --- |
-| `culia-admin-dashboard.png` | Admin dashboard | Fictional totals and records |
-| `culia-admin-vehicles.png` | Vehicle inventory list | Fictional listings |
+| `culia-admin-dashboard.png` | Admin dashboard | Sample totals and records |
+| `culia-admin-vehicles.png` | Vehicle inventory list | Sample listings |
 | `culia-admin-add-vehicle.png` | Add vehicle form | Empty form |
-| `culia-admin-edit-vehicle.png` | Edit vehicle | Fictional listing |
-| `culia-admin-reorder.png` | Shop order | Fictional listings |
-| `culia-admin-bookings.png` | Bookings schedule | Fictional customers, paid status |
-| `culia-admin-interest.png` | Saved interest and abandoned bookings | Fictional customers |
-| `culia-admin-leads.png` | Leads list | Fictional customers |
+| `culia-admin-edit-vehicle.png` | Edit vehicle | Sample listing |
+| `culia-admin-reorder.png` | Shop order | Sample listings |
+| `culia-admin-bookings.png` | Bookings schedule | Sample customers, paid status |
+| `culia-admin-interest.png` | Saved interest and abandoned bookings | Sample customers |
+| `culia-admin-leads.png` | Leads list | Sample customers |
 
 ## Concept demos
 
@@ -45,11 +45,11 @@ and records are invented.
 | `ops-inventory.png` | Operations inventory |
 | `ops-orders.png` | Operations orders |
 | `ops-reports.png` | Operations reports |
-| `programme-preview.png` | Programme dashboard |
-| `programme-applications.png` | Programme applications |
-| `programme-cohorts.png` | Programme cohorts |
-| `programme-attendance.png` | Programme attendance register |
-| `programme-certificates.png` | Programme certificates |
+| `programme-preview.png` | LMS dashboard |
+| `programme-applications.png` | LMS applications |
+| `programme-cohorts.png` | LMS cohorts |
+| `programme-attendance.png` | LMS attendance register |
+| `programme-certificates.png` | LMS certificates |
 
 ## Brand and social assets
 
@@ -82,7 +82,7 @@ Use this every time a screenshot is added or replaced.
 - [ ] Ensure text is sharp and not cut off.
 - [ ] Avoid showing real names, emails, phone numbers, payment references, card
       details, addresses or private notes.
-- [ ] For admin screens, populate with clearly fictional records.
+- [ ] For admin screens, populate with clearly sample records.
 - [ ] If a real name or reference appears, redact it before saving. Prefer replacing
       the record in the demo database over blurring the image.
 

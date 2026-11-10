@@ -60,6 +60,44 @@ If the form does not appear:
 - Trigger a fresh production deploy, not only a browser refresh.
 - Check the deploy log for a form detection message.
 
+## Send enquiries to the Forthmark inbox
+
+The published address is `forthmarksys@gmail.com`. Netlify stores every form
+submission in the dashboard, and it can also email each submission to that
+address. Both are included on the free plan.
+
+Do this after the first production deploy, because the form must be detected
+before notifications can be configured.
+
+1. Open the site in Netlify.
+2. Go to **Forms**, then **Submission notifications**.
+3. Choose **Add notification**, then **Email notification**.
+4. Set **Event to listen for** to `New submission to project-enquiry`.
+5. Set **Email to notify** to `forthmarksys@gmail.com`.
+6. Optionally set a custom subject, for example
+   `New Forthmark enquiry from the website`.
+7. Choose **Save**.
+
+Netlify may send a confirmation message to `forthmarksys@gmail.com` the first
+time. Confirm it if asked. If Netlify will not accept the address, add it under
+**Team settings**, **Members**, then retry the notification. A separate Netlify
+user is not required for a notification address in most accounts.
+
+The form field named `email` becomes the reply address on the notification. That
+means choosing **Reply** in the inbox replies directly to the person who sent the
+enquiry.
+
+Test it once after setup:
+
+1. Submit the contact form on the live site using a real address you can check.
+2. Confirm the message arrives at `forthmarksys@gmail.com`.
+3. Confirm the submission also appears under **Forms**, then `project-enquiry`.
+4. Reply to the notification and confirm the reply goes to the address entered in
+   the form, not to `forthmarksys@gmail.com`.
+
+Email notifications do not replace the dashboard record. If an email is filtered
+as spam, the submission is still stored under **Forms**.
+
 ## Free plan limits and what consumes credits
 
 As of November 2026, new Netlify accounts use credit based plans. The free plan

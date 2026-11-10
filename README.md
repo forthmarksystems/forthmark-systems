@@ -7,7 +7,7 @@ case study, two clearly labelled concept demos, and a Netlify contact form.
 
 - Seven main pages: Home, Services, Our Work, Industries, How We Work, About, Contact.
 - Three case studies: Culia Autos (live client), Business Operations System
-  (concept demo), Programme and Membership Platform (concept demo).
+  (concept demo), Learning Management System (LMS) (concept demo).
 - Two working demos at `/demos/operations/` and `/demos/programme/`.
 - A thank you page and a custom 404 page.
 - Netlify configuration, security headers, sitemap and robots file.

@@ -1,5 +1,5 @@
 /* Business operations system concept demo.
-   Fictional data only. State is stored in localStorage on this browser. */
+   Sample data only. State is stored in localStorage on this browser. */
 
 const STORAGE_KEY = "forthmark.ops.demo.v1";
 
@@ -1208,7 +1208,7 @@ function reportsView() {
             .join("")}
         </div>
         <div class="d-card__head" style="margin-top:1rem;margin-bottom:0.5rem"><h2>Export</h2></div>
-        <p class="d-muted" style="font-size:0.78rem;margin:0 0 0.6rem">Download the current order records as a CSV file. Fictional data only.</p>
+        <p class="d-muted" style="font-size:0.78rem;margin:0 0 0.6rem">Download the current order records as a CSV file. Sample data only.</p>
         <button class="d-btn" data-action="export-orders">Export orders CSV</button>
       </div>
     </div>
@@ -1251,7 +1251,7 @@ function settingsView() {
         </p>
         <p class="d-muted" style="font-size:0.82rem;margin-top:0.6rem">
           Changes are saved in this browser only. Resetting replaces them with the
-          original fictional sample data.
+          original sample data.
         </p>
         <div class="d-card__head" style="margin-top:1rem;margin-bottom:0.5rem"><h2>Demo data</h2></div>
         <p class="d-muted" style="font-size:0.78rem;margin-bottom:0.6rem">
@@ -1420,7 +1420,7 @@ function orderModal(order) {
 function customerForm() {
   return `
     <div class="d-modal__head">
-      <div><h2 id="modal-title">Add customer</h2><p>Fictional record for this demo.</p></div>
+      <div><h2 id="modal-title">Add customer</h2><p>Sample record for this demo.</p></div>
       <button class="d-modal__close" type="button" data-action="close-modal" aria-label="Close">&times;</button>
     </div>
     <form data-form="customer">
@@ -1590,7 +1590,7 @@ function handleClick(event) {
   if (action === "reset") {
     if (
       window.confirm(
-        "Reset the demo? This replaces all changes with the original fictional sample data.",
+        "Reset the demo? This replaces all changes with the original sample data.",
       )
     ) {
       state = seedData();

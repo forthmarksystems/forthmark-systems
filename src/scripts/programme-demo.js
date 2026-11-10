@@ -1,5 +1,5 @@
-/* Programme and membership platform concept demo.
-   Fictional data only. State is stored in localStorage on this browser. */
+/* Learning management system concept demo.
+   Sample data only. State is stored in localStorage on this browser. */
 
 const STORAGE_KEY = "forthmark.programme.demo.v1";
 
@@ -1137,7 +1137,7 @@ function reportsView() {
       </div>
     </div>
 
-    <p class="d-sub">These figures are calculated from the fictional demo records in this browser. They are not client results or performance claims.</p>
+    <p class="d-sub">These figures are calculated from the sample demo records in this browser. They are not client results or performance claims.</p>
   `;
 }
 
@@ -1177,11 +1177,11 @@ function settingsView() {
         <p class="d-body">
           This is a concept demonstration, not a client deployment. The
           organisation, applicants, participants, sessions and certificates are
-          fictional. Records are stored in this browser only and no data is sent to
+          sample data. Records are stored in this browser only and no data is sent to
           a server.
         </p>
         <p class="d-sub" style="margin-top:0.7rem">
-          A production programme platform would add authentication, role based
+          A production learning management system would add authentication, role based
           access, email notifications, document uploads, payment or invoicing, and
           an audit trail. Those are deliberately out of scope for this demo.
         </p>
@@ -1340,7 +1340,7 @@ function applicationForm() {
     <div class="d-modal__head">
       <div>
         <h2 id="modal-title">Add application</h2>
-        <p>Creates a new fictional applicant record in this demo.</p>
+        <p>Creates a new sample applicant record in this demo.</p>
       </div>
       <button class="d-modal__close" type="button" data-action="close-modal" aria-label="Close">&times;</button>
     </div>

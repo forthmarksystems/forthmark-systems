@@ -12,7 +12,7 @@ is no database and no admin dashboard for the portfolio itself.
 | Our Work index | `src/pages/work/index.astro` |
 | Culia Autos case study | `src/pages/work/culia-autos.astro` |
 | Operations demo case study | `src/pages/work/operations-system.astro` |
-| Programme demo case study | `src/pages/work/programme-platform.astro` |
+| LMS demo case study | `src/pages/work/programme-platform.astro` |
 | Industries | `src/pages/industries.astro` |
 | How We Work | `src/pages/how-we-work.astro` |
 | About | `src/pages/about.astro` |
@@ -25,21 +25,25 @@ is no database and no admin dashboard for the portfolio itself.
 | Main styles | `src/styles/global.css` |
 | Demo styles | `src/styles/demo.css` |
 | Operations demo logic | `src/scripts/ops-demo.js` |
-| Programme demo logic | `src/scripts/programme-demo.js` |
+| LMS demo logic | `src/scripts/programme-demo.js` |
 | Images | `public/images/` |
 | Domain and sitemap settings | `astro.config.mjs` |
 
-## Replace the contact email
+## Change the contact email
 
-The address `hello@forthmarksystems.com` is a placeholder. It appears in:
+The published address is `forthmarksys@gmail.com`. It appears in:
 
 - `src/components/Footer.astro`
 - `src/layouts/BaseLayout.astro`
 - `src/pages/contact.astro`
 - `src/pages/thank-you.astro`
 
-Search the project for `hello@forthmarksystems.com` and replace every occurrence.
+Search the project for `forthmarksys@gmail.com` and replace every occurrence.
 Also update the contact block text on the contact page if the address changes.
+
+After changing the address, update the Netlify form notification to the same
+address under **Forms**, then **Submission notifications**. Form submissions are
+emailed from Netlify, not from this repository.
 
 Do not put an email password or SMTP credential in any file. The form is handled by
 Netlify. The email address is only displayed as a link.
@@ -101,7 +105,7 @@ concept demo screenshot as a client deployment.
 
 ## Edit demo data
 
-The demos use fictional records stored in the browser. The seed data is in the
+The demos use sample records stored in the browser. The seed data is in the
 `seedData()` function near the top of:
 
 - `src/scripts/ops-demo.js`
@@ -111,7 +115,7 @@ After changing the shape of the data, change the storage key version, for exampl
 from `forthmark.ops.demo.v1` to `forthmark.ops.demo.v2`. Otherwise a visitor with
 old data in their browser may see errors until they reset the demo.
 
-The demo ribbon says the data is fictional. Keep that label visible. Do not connect
+The demo ribbon says the data is sample data. Keep that label visible. Do not connect
 a demo to a real database, payment provider or client account.
 
 ## Publishing an edit

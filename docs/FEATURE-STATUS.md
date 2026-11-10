@@ -31,7 +31,8 @@ These are account or content tasks, not code faults.
 2. **Rename the Netlify site** to `forthmark-systems` if available.
 3. **Enable form detection**, then trigger a new deploy. Submit a test enquiry and
    confirm it appears under Forms.
-4. **Replace the contact email.** `hello@forthmarksystems.com` is a placeholder.
+4. **Add the form email notification.** Set **Forms**, then **Submission
+   notifications** to send to `forthmarksys@gmail.com`. See `docs/HOSTING.md`.
 5. **Replace the domain.** `https://forthmarksystems.com` is a placeholder in
    `astro.config.mjs` and `robots.txt`.
 6. **Confirm screenshot permissions.** Culia Autos is shown with real public
@@ -56,7 +57,7 @@ site and its concept demos.
 - Appointment calendar sync.
 - File uploads or document verification.
 - PDF certificate generation. The demo records eligibility and an issue date only.
-- Public application forms for the programme demo.
+- Public application forms for the LMS demo.
 - Live chat or chatbot.
 - Blog, news or insights section.
 - Site search.
@@ -90,7 +91,7 @@ dashboard should be checked after busy periods or repeated deploys.
 
 Nothing in this repository connects to, modifies or exposes the Culia Autos
 production application, database or admin credentials. The case study uses public
-screenshots and a local admin copy with fictional records.
+screenshots and a local admin copy with sample records.
 
 ## Test record
 
