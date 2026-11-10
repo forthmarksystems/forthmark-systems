@@ -60,20 +60,56 @@ If the form does not appear:
 - Trigger a fresh production deploy, not only a browser refresh.
 - Check the deploy log for a form detection message.
 
-## Free plan limits
+## Free plan limits and what consumes credits
 
 As of November 2026, new Netlify accounts use credit based plans. The free plan
-includes a monthly credit allowance, and usage is drawn from it. Figures can
-change, so confirm the current limits in the Netlify dashboard before relying on
-them.
+includes 300 credits per month. Figures can change, so confirm the current limits
+in the Netlify dashboard before relying on them.
 
-At the time of building:
+Official Netlify rates at the time of building:
 
-- 300 credits per month.
-- A production deploy costs about 15 credits.
-- Bandwidth costs about 20 credits per GB.
-- Requests cost about 2 credits per 10,000.
-- Form submissions are included.
+| Item | Credit cost | Applies to this site |
+| --- | --- | --- |
+| Production deploy | 15 credits each | Yes, each successful publish |
+| Deploy Preview or branch deploy | 0 credits | Yes, if used for review |
+| Failed deploy or rollback | 0 credits | Yes |
+| Form submissions | Free and unlimited | Yes |
+| Bandwidth | 20 credits per GB | Yes, when visitors load the site |
+| Web requests | 2 credits per 10,000 requests | Yes, when visitors load the site |
+| Compute | 10 credits per GB-hour | No, this site has no functions, database or preview server |
+
+This is a static site. It has no serverless functions, no Netlify Database and no
+Preview server, so compute should remain at zero.
+
+### What this means in practice
+
+A production deploy is the largest controllable cost. Bandwidth and requests are
+metered but small at portfolio traffic levels.
+
+Example monthly use:
+
+- One production deploy, 1 GB of bandwidth, 10,000 requests: 15 + 20 + 2 = 37 credits.
+- Two production deploys with the same traffic: 52 credits.
+- Ten production deploys with the same traffic: 172 credits.
+
+The figures are estimates, not promises. Check the Netlify usage dashboard.
+
+### Keeping credit use low
+
+1. Review changes locally first with `npm run dev` or `npm run preview`. This uses
+   no Netlify credits.
+2. Batch corrections into one production deploy rather than publishing each small
+   change.
+3. Use a Deploy Preview or branch deploy for a hosted review where possible. Netlify
+   lists these at 0 credits.
+4. Add `[skip ci]` or `[skip netlify]` anywhere in a commit message when a push
+   should not trigger a build. This is useful for documentation only changes.
+5. If automatic deploys are not wanted, stop builds under **Project configuration**,
+   **Developer settings**, **Continuous deployment**, **Build settings**. This stops
+   all automatic production, branch and preview builds. Manual CLI deploys still
+   work.
+6. Do not use **Trigger deploy** repeatedly on the same content. Each successful
+   production deploy counts.
 
 If the monthly credits are exhausted, Netlify may pause all sites on the account
 until the next cycle. This is a low traffic portfolio, but the dashboard should be
