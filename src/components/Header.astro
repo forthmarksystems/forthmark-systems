@@ -33,11 +33,11 @@ function isActive(href: string) {
           </a>
         ))
       }
-      <a class="btn btn--primary nav__cta" href="/contact">Discuss a project</a>
+      <a class="btn btn--primary nav__cta" href="/contact" aria-current={isActive("/contact") ? "page" : undefined}>Discuss a project</a>
     </nav>
 
     <div class="header-actions">
-      <a class="btn btn--primary" href="/contact">Discuss a project</a>
+      <a class="btn btn--primary" href="/contact" aria-current={isActive("/contact") ? "page" : undefined}>Discuss a project</a>
       <button
         class="menu-toggle"
         type="button"
@@ -50,15 +50,20 @@ function isActive(href: string) {
     </div>
   </div>
 </header>
+<div class="nav-backdrop" aria-hidden="true"></div>
 
 <script is:inline>
   (() => {
     const toggle = document.querySelector(".menu-toggle");
     const nav = document.getElementById("site-nav");
-    if (!toggle || !nav) return;
+    const header = document.querySelector(".site-header");
+    const backdrop = document.querySelector(".nav-backdrop");
+    if (!toggle || !nav || !header) return;
 
     const setOpen = (open) => {
       nav.classList.toggle("is-open", open);
+      header.classList.toggle("is-menu-open", open);
+      document.documentElement.classList.toggle("is-menu-open", open);
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     };
@@ -66,6 +71,8 @@ function isActive(href: string) {
     toggle.addEventListener("click", () => {
       setOpen(toggle.getAttribute("aria-expanded") !== "true");
     });
+
+    backdrop?.addEventListener("click", () => setOpen(false));
 
     nav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => setOpen(false));

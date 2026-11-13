@@ -1,9 +1,10 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 
-// Replace this with the final domain before publishing.
+// Temporary live address. Switch to https://forthmarksystems.com when the
+// custom domain is connected, then update public/robots.txt too.
 export default defineConfig({
-  site: "https://forthmarksystems.com",
+  site: "https://forthmark-systems.netlify.app",
   integrations: [
     sitemap({
       filter: (page) =>

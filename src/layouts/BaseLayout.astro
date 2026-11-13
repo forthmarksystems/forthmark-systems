@@ -70,10 +70,16 @@ const organization = {
 </html>
 
 <script is:inline>
+  // Enable :active press feedback on touch devices, including iOS Safari.
+  document.addEventListener("touchstart", () => {}, { passive: true });
+
   // Keep the mobile menu closed after browser back or forward navigation.
   window.addEventListener("pageshow", () => {
     const nav = document.getElementById("site-nav");
     const toggle = document.querySelector(".menu-toggle");
+    const header = document.querySelector(".site-header");
+    document.documentElement.classList.remove("is-menu-open");
+    header?.classList.remove("is-menu-open");
     if (nav) nav.classList.remove("is-open");
     if (toggle) {
       toggle.setAttribute("aria-expanded", "false");
